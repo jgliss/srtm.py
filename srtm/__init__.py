@@ -15,5 +15,9 @@
 # limitations under the License.
 
 from . import main as mod_main
+from pkg_resources import get_distribution
+
+__version__ = get_distribution('srtm.py').version
+print('Importing srtm.py v{}'.format(__version__))
 
 get_data = mod_main.get_data

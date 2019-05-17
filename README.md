@@ -1,12 +1,12 @@
 [![Build Status](https://travis-ci.org/tkrajina/srtm.py.svg?branch=master)](https://travis-ci.org/tkrajina/srtm.py)
 
-# SRTM.py
+# srtm.py
 
-SRTM.py is a python parser for the Shuttle Radar Topography Mission elevation data.
+srtm.py is a python parser for the Shuttle Radar Topography Mission elevation data.
 
 See: [http://www2.jpl.nasa.gov/srtm/](http://www2.jpl.nasa.gov/srtm/).
 
-You can see SRTM.py in action on [Trackprofiler (online GPS track editor and organizer)](http://www.trackprofiler.com).
+You can see srtm.py in action on [Trackprofiler (online GPS track editor and organizer)](http://www.trackprofiler.com).
 
 There is also a Golang port of this library: [go-elevations](https://github.com/tkrajina/go-elevations).
 
@@ -26,7 +26,7 @@ You can add elevations for all points in a GPS track with:
     elevation_data = srtm.get_data()
     elevation_data.add_elevations(gpx)
 
-But this is raw SRTM data. If you need some approximations, you can try with:
+But this is raw srtm data. If you need some approximations, you can try with:
 
     import srtm.gpx
     import gpxpy
@@ -55,7 +55,7 @@ You can create elevation images with:
 
 On every elevation requested the library will:
 
- * Check if the SRTM file is stored locally
+ * Check if the srtm file is stored locally
  * If not -- download it from NASA servers and store locally (in `~/.cache/srtm/`)
  * Parse elevations from it
 
@@ -104,5 +104,4 @@ gpxelevations is a utility command line tool to add/update elevations in a GPS t
 
 ## License
 
-SRTM.py is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
-
+srtm.py is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)

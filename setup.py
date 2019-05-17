@@ -15,24 +15,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import distutils.core as mod_distutilscore
+from setuptools import setup
 
-mod_distutilscore.setup(
-    name = 'SRTM.py',
-    version = '0.3.4',
-    description = 'Python parser for the Shuttle Radar Topography Mission elevation data',
-    license = 'Apache License, Version 2.0',
-    author = 'Tomo Krajina',
-    author_email = 'tkrajina@gmail.com',
-    url = 'https://github.com/tkrajina/srtm.py',
-    packages = ['srtm',],
-    package_data = {'': ['*.json']},
-    include_package_data = True,
-    classifiers = [
+with open("VERSION") as f:
+    version = f.readline()
+    f.close()
+    
+setup(
+      name = 'srtm.py',
+      version = version,
+      description = ('Python parser for the Shuttle Radar Topography Mission '
+                     'elevation data'),
+      license = 'Apache License, Version 2.0',
+      author = 'Tomo Krajina',
+      author_email = 'tkrajina@gmail.com',
+      url = 'https://github.com/tkrajina/srtm.py',
+      packages = ['srtm',],
+      package_data = {'': ['*.json']},
+      include_package_data = True,
+      classifiers = [
+        "Programming Language :: Python :: 3"
         "Programming Language :: Python",
         "Programming Language :: Python :: 2",
-    ],
-    install_requires=['requests'],
-    scripts=['gpxelevations']
-)
+        ],
+      install_requires=['requests'],
+      scripts=['gpxelevations']
+    )
+    
 

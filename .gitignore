@@ -12,4 +12,7 @@ build/
 dist/
 htmlcov/
 SRTM.py.egg-info/
+srtm.egg-info/
+srtm.py.egg-info/
 .coverage
+__pycache__
